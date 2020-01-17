@@ -1,0 +1,114 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,vmargin={20mm,20mm},hmargin={20mm,10mm}]{geometry}
+\usepackage[T1]{fontenc}
+
+\usepackage{tocloft, multicol} 
+\usepackage{amsmath, amsfonts, amssymb} 
+\usepackage{booktabs} 
+\usepackage{bm}  
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{graphicx} 
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{wrapfig,lipsum,threeparttable}
+\usepackage{footmisc, fixfoot}
+
+
+
+\DeclareFixedFootnote{\fnrefa}{ P. T. Boggs and J. E. Rogers, “Orthogonal Distance Regression,” in “Statistical analysis of measurement error models and applications: proceedings of the AMS-IMS-SIAM joint summer research conference held June 10-16, 1989,” Contemporary Mathematics, vol. 112, pg. 186, 1990. }
+\DeclareFixedFootnote{\fnrefb}{ Dr. J.Wagner - Physikalisches Anfängerpraktikum - V. 1.1 Stand 1/2018, Versuch 211}
+\DeclareFixedFootnote{\fnrefc}{ Dr. J.Wagner - Physikalisches Anfängerpraktikum - V. 1.2 Stand 06/2016, Versuch 14}
+
+\lstset{literate=%
+    {Ö}{{\"O}}1
+    {Ä}{{\"A}}1
+    {Ü}{{\"U}}1
+    {ß}{{\ss}}1
+    {ü}{{\"u}}1
+    {ä}{{\"a}}1
+    {ö}{{\"o}}1
+    {~}{{\textasciitilde}}1
+}
+\lstset{%
+backgroundcolor=\color{gray!32},
+basicstyle=\ttfamily\footnotesize,
+numbers=left,numberstyle=\scriptsize,
+frame=single,
+breaklines=true,
+}
+
+
+\usepackage[wby]{callouts}
+\title{WS19/20, PAP2.1, Versuch 213:\\ Gekoppeltes Pendel}
+\date{Versuchsdurchführung: \\17. Dezember, 2019}
+\author{Praktikanten:\\Gerasimov, V. \& Reiter, L.\\\\ Betreuer:\\ Jäschke, C.}
+
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\addtocontents{toc}{~\hfill\textbf{Seite}\par}
+
+\section[Einführung]{Einführung\fnrefb}\boldmath
+In diesem Versuch wollen wir uns mit den grundlegenden physikalischen Eigenschaften von Gekoppelte Oszillatoren befassen. Gekoppelte Oszillatoren finden sich in den verschiedensten Gebieten der Physik und anderer Naturwissenschaften  wieder. Z.B. in  der Festkörperphysik. Bei einem Kristall sind im Prinzip alle Atome über elektrische Wechselwirkungen miteinander gekoppelt, sodass der Kristall zu Schwingungen angeregt werden kann. Zur mathematischen Beschreibung stellt man sich den Kristall aus regelmäßig angeordneten Massenpunkten vor, die mit ihren nächsten Nachbarn durch Federn gekoppelt sind. Die Auswertung dieses Systems führt zu quantisierten Gitterschwingungen, sogenannte Phononen.\\
+
+Dafür schauen wir uns 3 Spezialfälle der Schwingungen von einem Gegengekoppeltem Pendelpaar an:
+\begin{itemize}
+\item Die Symmetrische Schwingung
+\item Die Asymmetrische Schwingung
+\item Die Schwebungschwingung
+\end{itemize}
+
+\section[Versuchsaufbau, Literaturwerte \& Vorbereitung]{Versuchsaufbau\fnrefb, Literaturwerte \& Vorbereitung}
+\begin{itemize}
+\item zwei Pendel aus Messing (Dichte: \(\rho=7.5\:g\:{cm}^{3}\))
+\item Kopplungsfeder (Ring aus Federbronzeband)
+\item fest montierter magnetischer Winkelaufnehmer
+\item Analog-Digital Wandler
+\end{itemize}
+
+\subsection{Messergebnisse}
+Messdaten sind im Versuchsprotokoll (17.Dezemberr, 2019) in die Tabellen [211.1],[211.2] und [211.3]
+Außerdem wurden alle Verläufe der Schwingungssignale für alle Messung als TXT-Dateien gespeichert.
+
+\unboldmath
+\begin{table}[htb]
+\centering
+\caption{Messung der einzelnen Schwingungsfrequenzen ohne Koppelfeder}\label{tab:Tab1}
+\begin{threeparttable}
+\begin{tabular}{rr}
+\toprule
+Frequenz vom Pendel 1  & Frequenz vom Pendel 2\\
+\boldmath\(f_1\)\unboldmath\([Hz]\)&\boldmath\(f_2\)\unboldmath\([Hz]\)\\
+\midrule
+\(0.613\pm0.003\)&\(0.613\pm0.003\)\\
+  \bottomrule
+ \end{tabular}
+\begin{tablenotes}
+\raggedright
+\item[1]sowohl \boldmath\(\Delta f_1\) als auch \(\Delta f_2\) folgen aus der Halbwertsbreite der Peaks der Fourier-transformierten Signale, die die Hall-Sensoren uns liefern. (siehe Python Auswertung) \unboldmath
+\end{tablenotes}
+\end{threeparttable}\end{table}
+\boldmath
+
+\subsection{Kurvenanpassung mit Python}
+\subsubsection{Source Code \& Input}
+
+\subsubsection{Output}
+
+\subsection{Auswertung}
+
+\section{Fazit}
+
+\unboldmath
+\end{document}
